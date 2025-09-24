@@ -16,20 +16,7 @@ Comprehensive Reporting: Generates PDF reports, JSON data, and CSV event logs
 
 Annotated Videos: Produces videos with visual annotations showing coach information and door status
 
-📁 Project Structure
-text
-train_video_processing/
-├── main.py                 # Main entry point
-├── video_processor.py      # Video handling and segment extraction
-├── coach_detector.py       # Coach boundary detection
-├── door_detector.py        # Door status analysis
-├── frame_extractor.py      # Frame extraction and analysis
-├── report_generator.py     # PDF report generation
-├── utils.py               # Utility functions
-├── requirements.txt       # Python dependencies
-└── README.md             # This file
-🚀 Installation
-Clone or download the project files
+
 
 Create a virtual environment (recommended):
 
@@ -55,24 +42,6 @@ python main.py input_videos/your_video.mp4 --output_dir my_results
 📊 Output Structure
 After processing, the system creates:
 
-text
-output/
-├── processed_videos/
-│   ├── coach_01/
-│   │   ├── coach_01.mp4                 # Original coach video
-│   │   ├── coach_01_door_annotated.mp4  # Annotated version
-│   │   └── ... (for each coach)
-│   └── annotated_overall.mp4            # Complete annotated video
-├── extracted_frames/
-│   ├── coach_01/
-│   │   ├── coach_01_frame_000001.jpg
-│   │   └── ... (representative frames)
-│   └── ... (for each coach)
-└── reports/
-    ├── report_videoname_timestamp.json  # Detailed analysis data
-    ├── events_videoname.csv            # Door event timeline
-    └── report_videoname_timestamp.pdf  # Summary report
-🔧 How It Works
 1. Coach Detection
 Samples frames at regular intervals (0.3 seconds)
 
@@ -124,14 +93,7 @@ Temporal Analysis: Duration and frame ranges for each coach
 Key parameters can be adjusted in respective files:
 
 Coach Detection (coach_detector.py)
-python
-sample_seconds=0.3      # Frame sampling interval
-min_duration=1.5        # Minimum coach duration
-max_duration=20.0       # Maximum coach duration
-Door Detection (door_detector.py)
-python
-vertical_frac=(0.25, 0.75)    # Door region height fraction
-motion_change_threshold=0.1    # Sensitivity for door detection
+
 🐛 Troubleshooting
 Common Issues
 "Module not found" errors
